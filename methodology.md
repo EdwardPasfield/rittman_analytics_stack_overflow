@@ -1,8 +1,8 @@
-# Data Modeling Methodology
+# Stack Overflow Data Model Design
 
 ## Overview
 
-This document outlines the dimensional modeling approach taken to analyze Stack Overflow data for identifying popular but unanswered questions. The methodology demonstrates understanding of dimensional modeling concepts including business/surrogate keys, hierarchies, conformed dimensions, and fact table design.
+This document explains the dimensional modeling approach used to analyze Stack Overflow data for identifying popular but unanswered questions. It demonstrates practical application of dimensional modeling concepts including business/surrogate keys, hierarchies, conformed dimensions, and fact table design.
 
 ## Source Data Analysis
 
@@ -79,18 +79,18 @@ erDiagram
 
 ### Why Questions + Tags Only?
 
-Given the comprehensive Stack Overflow schema, we strategically focused on **questions** and **tags** to create a streamlined, targeted solution that directly answers the business question while minimizing complexity:
+Given the comprehensive Stack Overflow schema, we focused on questions and tags to create a targeted solution that directly answers the business question while minimizing complexity:
 
-**✅ Included:**
+**Included:**
 - **Posts Questions**: Core entity containing the unanswered questions we need to analyze
 - **Tags**: Taxonomy for categorizing questions by topic
 
-**❌ Excluded:**
+**Excluded:**
 - **Posts Answers**: Not needed since we're focusing on unanswered questions
 - **Users**: User attribution could be added later but wasn't essential for topic trend analysis
 - **Stack Overflow Posts**: Redundant with posts_questions for our scope
 
-This approach provided a large amount of the analytical purpose while trimming down on the complexity of the implementation.
+This approach provided most of the analytical value with significantly less implementation complexity.
 
 ## Dimensional Model Design
 
@@ -130,7 +130,7 @@ This approach provided a large amount of the analytical purpose while trimming d
 
 ### Conformed Dimensions
 
-Both `dim_questions` and `dim_tags` are **conformed dimensions** designed for reuse:
+Both `dim_questions` and `dim_tags` are conformed dimensions designed for reuse:
 - **Consistent surrogate keys** across all fact tables
 - **Standardized attributes** with consistent naming and data types
 - **Shared grain** definitions that work for multiple analytical contexts
@@ -155,7 +155,7 @@ dim_question_tag_bridge:
 
 ### Fact Table Design
 
-**fct_tags_stats_monthly** is a **periodic snapshot fact table**:
+**fct_tags_stats_monthly** is a periodic snapshot fact table:
 
 ```
 fct_tags_stats_monthly:

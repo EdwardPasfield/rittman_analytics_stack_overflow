@@ -25,8 +25,10 @@ In this exercise we're focused on identifying the topics that are popular and tr
 
 ## How dbt + the report answer the question
 
-- **Modeling narrative:** The dbt pipeline ingests the public `posts_questions` and `tags` tables, explodes the `<tag>` strings, and builds `dim_questions`, `dim_tags`, and `dim_question_tag_bridge` with surrogate keys plus schema tests. The resulting star schema feeds `fct_tags_stats_monthly`, which counts unanswered questions, averages views/scores, and calculates 1/3/6 month deltas per tag/month. Custom dbt tests validate fact table consistency (averages match sums/counts within tolerance) and enforce referential integrity across dimensions. See `data-warehouse/models/stack_overflow/docs/methodology.md` for the complete dimensional modeling methodology and ERD.
+- **Modeling narrative:** The dbt pipeline ingests the public `posts_questions` and `tags` tables, and builds `dim_questions`, `dim_tags`, and `dim_question_tag_bridge` with surrogate keys plus schema tests. The resulting star schema feeds `fct_tags_stats_monthly`, which counts unanswered questions, averages views/scores, and calculates 1/3/6 month deltas per tag/month. Custom dbt tests validate fact table consistency (averages match sums/counts within tolerance) and enforce referential integrity across dimensions. See `data-warehouse/models/stack_overflow/docs/methodology.md` for the complete dimensional modeling methodology and ERD.
+
 - **Reporting narrative:** Looker Studio consumes `fct_tags_stats_monthly` for scorecards (total questions, unanswered, unanswered-with-tags), a pie chart of topic share, and a delta-driven top-20 table/time-series pair with conditional formatting so the selected 1/3/6 month window runs through every visual.
+
 - **Insight flow:** Together the dbt models and the dashboard provide context (volume and tagging coverage), surface the top tags, and reveal which ones are accelerating in views or scores so stakeholders can prioritize where to respond.
 
 ## Usage instructions
