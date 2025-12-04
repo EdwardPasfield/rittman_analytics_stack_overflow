@@ -47,7 +47,7 @@ export BQ_KEY_PATH="/Users/edwardpasfield/Documents/Projects/rittman_analytics_s
 ```
 
 3. Run `source .env` before executing dbt commands or refreshing the Looker Studio source.
-4. Validate the dataset in the BigQuery console: https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1srittman-analytics-ed-pasfield!2sdev
+4. Validate the dataset in the BigQuery console
 
 ### Running dbt
 
@@ -67,4 +67,3 @@ export BQ_KEY_PATH="/Users/edwardpasfield/Documents/Projects/rittman_analytics_s
 1. Improve the report controls so you can filter by views, scores, or question counts across the 1/3/6 month windows—adding another fact that pre-aggregates by the chosen metric would make those filters smoother.
 2. Model `dim_users` so we can rank the users with the most unanswered questions that still have topic coverage; that list could be handed to customer management for follow-up or deeper investigations.
 3. A yearly topic podium or similar based on a combination of all three stats, amount of questions * score * views (or similar)
-
