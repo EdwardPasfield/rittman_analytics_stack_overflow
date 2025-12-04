@@ -21,5 +21,4 @@ select
     score,
     tags,
     view_count,
-    DATE_TRUNC(creation_date, MONTH) AS event_date
 from `bigquery-public-data`.`stackoverflow`.`posts_questions`

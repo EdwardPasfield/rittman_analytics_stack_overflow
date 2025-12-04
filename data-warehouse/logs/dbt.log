@@ -13545,3 +13545,458 @@ FROM monthly
 [0m01:10:32.985030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ac3090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121d00350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13262e3d0>]}
 [0m01:10:32.985230 [debug] [MainThread]: Flushing usage events
 [0m01:10:33.629714 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:02:24.989735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110873810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1108e3b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1108e3f90>]}
+
+
+============================== 03:02:24.992815 | 8eb38c06-30b6-45fe-9cba-d963861cd157 ==============================
+[0m03:02:24.992815 [info ] [MainThread]: Running with dbt=1.9.2
+[0m03:02:24.993082 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m03:02:25.525688 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m03:02:25.525964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1169bed90>]}
+[0m03:02:25.526153 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m03:02:25.526298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x115f78dd0>]}
+[0m03:02:25.576847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110888590>]}
+[0m03:02:25.595590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028f2510>]}
+[0m03:02:25.595849 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m03:02:25.653461 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m03:02:25.710693 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m03:02:25.710955 [debug] [MainThread]: Partial parsing: added file: stack_overflow://models/stack_overflow/docs/project_overview.md
+[0m03:02:25.711099 [debug] [MainThread]: Partial parsing: updated file: stack_overflow://models/stack_overflow/docs/project_plan.md
+[0m03:02:25.711230 [debug] [MainThread]: Partial parsing: updated file: stack_overflow://models/stack_overflow/bronze/raw_posts_questions.sql
+[0m03:02:25.831770 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.stack_overflow.silver
+- models.stack_overflow.bronze
+- models.stack_overflow.gold
+[0m03:02:25.836399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120985190>]}
+[0m03:02:25.868321 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse/target/manifest.json
+[0m03:02:25.869928 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse/target/semantic_manifest.json
+[0m03:02:25.880352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12099ccd0>]}
+[0m03:02:25.880565 [info ] [MainThread]: Found 9 models, 4 sources, 489 macros
+[0m03:02:25.880701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117f3cc90>]}
+[0m03:02:25.881480 [info ] [MainThread]: 
+[0m03:02:25.881617 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m03:02:25.881723 [info ] [MainThread]: 
+[0m03:02:25.881920 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:02:25.883510 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rittman-analytics-ed-pasfield'
+[0m03:02:25.883664 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:02:26.451240 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rittman-analytics-ed-pasfield, now list_rittman-analytics-ed-pasfield_dev)
+[0m03:02:26.451842 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:02:26.962969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117c5e610>]}
+[0m03:02:26.963616 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:02:26.968108 [debug] [Thread-1 (]: Began running node model.stack_overflow.raw_posts_questions
+[0m03:02:26.968714 [debug] [Thread-2 (]: Began running node model.stack_overflow.raw_tags
+[0m03:02:26.969310 [info ] [Thread-1 (]: 1 of 9 START sql table model dev.raw_posts_questions ........................... [RUN]
+[0m03:02:26.969826 [info ] [Thread-2 (]: 2 of 9 START sql table model dev.raw_tags ...................................... [RUN]
+[0m03:02:26.970340 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rittman-analytics-ed-pasfield_dev, now model.stack_overflow.raw_posts_questions)
+[0m03:02:26.970756 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.stack_overflow.raw_tags'
+[0m03:02:26.971083 [debug] [Thread-1 (]: Began compiling node model.stack_overflow.raw_posts_questions
+[0m03:02:26.971448 [debug] [Thread-2 (]: Began compiling node model.stack_overflow.raw_tags
+[0m03:02:26.978519 [debug] [Thread-1 (]: Writing injected SQL for node "model.stack_overflow.raw_posts_questions"
+[0m03:02:26.981184 [debug] [Thread-2 (]: Writing injected SQL for node "model.stack_overflow.raw_tags"
+[0m03:02:26.982059 [debug] [Thread-2 (]: Began executing node model.stack_overflow.raw_tags
+[0m03:02:26.982352 [debug] [Thread-1 (]: Began executing node model.stack_overflow.raw_posts_questions
+[0m03:02:26.992081 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:02:26.997084 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:02:27.538472 [debug] [Thread-2 (]: Writing runtime sql for node "model.stack_overflow.raw_tags"
+[0m03:02:27.538966 [debug] [Thread-2 (]: On model.stack_overflow.raw_tags: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.raw_tags"} */
+
+  
+    
+
+    create or replace table `rittman-analytics-ed-pasfield`.`dev`.`raw_tags`
+      
+    
+    cluster by id
+
+    OPTIONS()
+    as (
+      
+
+select 
+    * 
+from `bigquery-public-data`.`stackoverflow`.`tags`
+    );
+  
+[0m03:02:27.564218 [debug] [Thread-1 (]: Writing runtime sql for node "model.stack_overflow.raw_posts_questions"
+[0m03:02:27.564821 [debug] [Thread-1 (]: On model.stack_overflow.raw_posts_questions: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.raw_posts_questions"} */
+
+  
+    
+
+    create or replace table `rittman-analytics-ed-pasfield`.`dev`.`raw_posts_questions`
+      
+    partition by date_trunc(creation_date, month)
+    cluster by id
+
+    OPTIONS()
+    as (
+      
+
+select
+    id,
+    title,
+    body,
+    accepted_answer_id,
+    answer_count,
+    comment_count,
+    community_owned_date,
+    creation_date,
+    favorite_count,
+    last_activity_date,
+    last_edit_date,
+    last_editor_display_name,
+    last_editor_user_id,
+    owner_display_name,
+    owner_user_id,
+    parent_id,
+    post_type_id,
+    score,
+    tags,
+    view_count,
+from `bigquery-public-data`.`stackoverflow`.`posts_questions`
+    );
+  
+[0m03:02:28.203401 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:c24e2379-f46f-49e0-bc4f-8b781e3930ef&page=queryresults
+[0m03:02:28.288835 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:03d32bc3-9e95-462e-905a-50c5beadf675&page=queryresults
+[0m03:02:31.207477 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1209d4cd0>]}
+[0m03:02:31.208128 [info ] [Thread-2 (]: 2 of 9 OK created sql table model dev.raw_tags ................................. [[32mCREATE TABLE (63.7k rows, 2.5 MiB processed)[0m in 4.23s]
+[0m03:02:31.208623 [debug] [Thread-2 (]: Finished running node model.stack_overflow.raw_tags
+[0m03:02:31.209148 [debug] [Thread-4 (]: Began running node model.stack_overflow.stg_tags
+[0m03:02:31.209576 [info ] [Thread-4 (]: 3 of 9 START sql view model dev.stg_tags ....................................... [RUN]
+[0m03:02:31.209992 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.stack_overflow.stg_tags'
+[0m03:02:31.210238 [debug] [Thread-4 (]: Began compiling node model.stack_overflow.stg_tags
+[0m03:02:31.212626 [debug] [Thread-4 (]: Writing injected SQL for node "model.stack_overflow.stg_tags"
+[0m03:02:31.213224 [debug] [Thread-4 (]: Began executing node model.stack_overflow.stg_tags
+[0m03:02:31.225563 [debug] [Thread-4 (]: Writing runtime sql for node "model.stack_overflow.stg_tags"
+[0m03:02:31.228815 [debug] [Thread-4 (]: On model.stack_overflow.stg_tags: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.stg_tags"} */
+
+
+  create or replace view `rittman-analytics-ed-pasfield`.`dev`.`stg_tags`
+  OPTIONS()
+  as 
+
+SELECT
+  id,
+  tag_name,
+  count
+FROM `rittman-analytics-ed-pasfield`.`dev`.`raw_tags`;
+
+
+[0m03:02:31.229082 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m03:02:31.921135 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:9ba660fa-bc4b-4260-bbd1-540c4ec1d5e7&page=queryresults
+[0m03:02:32.712961 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120d4f590>]}
+[0m03:02:32.713395 [info ] [Thread-4 (]: 3 of 9 OK created sql view model dev.stg_tags .................................. [[32mCREATE VIEW (0 processed)[0m in 1.50s]
+[0m03:02:32.713641 [debug] [Thread-4 (]: Finished running node model.stack_overflow.stg_tags
+[0m03:02:32.713912 [debug] [Thread-2 (]: Began running node model.stack_overflow.dim_tags
+[0m03:02:32.714149 [info ] [Thread-2 (]: 4 of 9 START sql table model dev.dim_tags ...................................... [RUN]
+[0m03:02:32.714353 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.stack_overflow.raw_tags, now model.stack_overflow.dim_tags)
+[0m03:02:32.714499 [debug] [Thread-2 (]: Began compiling node model.stack_overflow.dim_tags
+[0m03:02:32.715921 [debug] [Thread-2 (]: Writing injected SQL for node "model.stack_overflow.dim_tags"
+[0m03:02:32.716254 [debug] [Thread-2 (]: Began executing node model.stack_overflow.dim_tags
+[0m03:02:32.717178 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m03:02:33.375286 [debug] [Thread-2 (]: Writing runtime sql for node "model.stack_overflow.dim_tags"
+[0m03:02:33.376585 [debug] [Thread-2 (]: On model.stack_overflow.dim_tags: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.dim_tags"} */
+
+  
+    
+
+    create or replace table `rittman-analytics-ed-pasfield`.`dev`.`dim_tags`
+      
+    
+    cluster by tag_key
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  FARM_FINGERPRINT(CONCAT('tag_', CAST(id AS STRING))) AS tag_key,
+  id AS tag_id,
+  LOWER(tag_name) AS tag_name,
+  count AS usage_count,
+  'topic' AS classification
+FROM `rittman-analytics-ed-pasfield`.`dev`.`stg_tags`
+    );
+  
+[0m03:02:33.858290 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:2e875e91-85e2-413f-80ba-5ac38ef3767b&page=queryresults
+[0m03:02:36.072222 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1211fda10>]}
+[0m03:02:36.075146 [info ] [Thread-2 (]: 4 of 9 OK created sql table model dev.dim_tags ................................. [[32mCREATE TABLE (63.7k rows, 1.8 MiB processed)[0m in 3.36s]
+[0m03:02:36.075497 [debug] [Thread-2 (]: Finished running node model.stack_overflow.dim_tags
+[0m03:02:43.597104 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120d0e5d0>]}
+[0m03:02:43.599522 [info ] [Thread-1 (]: 1 of 9 OK created sql table model dev.raw_posts_questions ...................... [[32mCREATE TABLE (23.0m rows, 37.2 GiB processed)[0m in 16.63s]
+[0m03:02:43.600422 [debug] [Thread-1 (]: Finished running node model.stack_overflow.raw_posts_questions
+[0m03:02:43.601529 [debug] [Thread-4 (]: Began running node model.stack_overflow.stg_questions
+[0m03:02:43.602410 [info ] [Thread-4 (]: 5 of 9 START sql view model dev.stg_questions .................................. [RUN]
+[0m03:02:43.603239 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.stack_overflow.stg_tags, now model.stack_overflow.stg_questions)
+[0m03:02:43.603683 [debug] [Thread-4 (]: Began compiling node model.stack_overflow.stg_questions
+[0m03:02:43.607964 [debug] [Thread-4 (]: Writing injected SQL for node "model.stack_overflow.stg_questions"
+[0m03:02:43.610911 [debug] [Thread-4 (]: Began executing node model.stack_overflow.stg_questions
+[0m03:02:43.616138 [debug] [Thread-4 (]: Writing runtime sql for node "model.stack_overflow.stg_questions"
+[0m03:02:43.617268 [debug] [Thread-4 (]: On model.stack_overflow.stg_questions: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.stg_questions"} */
+
+
+  create or replace view `rittman-analytics-ed-pasfield`.`dev`.`stg_questions`
+  OPTIONS()
+  as 
+
+WITH base AS (
+  SELECT
+    *
+  FROM `rittman-analytics-ed-pasfield`.`dev`.`raw_posts_questions`
+)
+
+SELECT
+  id,
+  creation_date,
+  view_count,
+  score,
+  tags,
+  accepted_answer_id,
+  answer_count,
+  comment_count,
+  owner_user_id,
+  CASE
+    WHEN accepted_answer_id IS NULL THEN TRUE
+    ELSE FALSE
+  END AS unanswered_flag,
+  CASE
+    WHEN tags IS NULL THEN []
+    ELSE SPLIT(REGEXP_REPLACE(tags, r'^<|>$', ''), '><')
+  END AS tag_list
+FROM base;
+
+
+[0m03:02:43.617837 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m03:02:44.420556 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:806b95ee-eb2e-4fc5-b3c8-fbb3a6a07042&page=queryresults
+[0m03:02:44.867641 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120db62d0>]}
+[0m03:02:44.868660 [info ] [Thread-4 (]: 5 of 9 OK created sql view model dev.stg_questions ............................. [[32mCREATE VIEW (0 processed)[0m in 1.26s]
+[0m03:02:44.869284 [debug] [Thread-4 (]: Finished running node model.stack_overflow.stg_questions
+[0m03:02:44.870202 [debug] [Thread-2 (]: Began running node model.stack_overflow.dim_questions
+[0m03:02:44.871016 [debug] [Thread-1 (]: Began running node model.stack_overflow.stg_question_tag_bridge
+[0m03:02:44.871856 [info ] [Thread-2 (]: 6 of 9 START sql table model dev.dim_questions ................................. [RUN]
+[0m03:02:44.872468 [info ] [Thread-1 (]: 7 of 9 START sql view model dev.stg_question_tag_bridge ........................ [RUN]
+[0m03:02:44.872991 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.stack_overflow.dim_tags, now model.stack_overflow.dim_questions)
+[0m03:02:44.873399 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.stack_overflow.raw_posts_questions, now model.stack_overflow.stg_question_tag_bridge)
+[0m03:02:44.873767 [debug] [Thread-2 (]: Began compiling node model.stack_overflow.dim_questions
+[0m03:02:44.874103 [debug] [Thread-1 (]: Began compiling node model.stack_overflow.stg_question_tag_bridge
+[0m03:02:44.879575 [debug] [Thread-2 (]: Writing injected SQL for node "model.stack_overflow.dim_questions"
+[0m03:02:44.882460 [debug] [Thread-1 (]: Writing injected SQL for node "model.stack_overflow.stg_question_tag_bridge"
+[0m03:02:44.883823 [debug] [Thread-2 (]: Began executing node model.stack_overflow.dim_questions
+[0m03:02:44.885844 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m03:02:44.886150 [debug] [Thread-1 (]: Began executing node model.stack_overflow.stg_question_tag_bridge
+[0m03:02:44.888302 [debug] [Thread-1 (]: Writing runtime sql for node "model.stack_overflow.stg_question_tag_bridge"
+[0m03:02:44.916655 [debug] [Thread-1 (]: On model.stack_overflow.stg_question_tag_bridge: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.stg_question_tag_bridge"} */
+
+
+  create or replace view `rittman-analytics-ed-pasfield`.`dev`.`stg_question_tag_bridge`
+  OPTIONS()
+  as 
+
+SELECT
+  q.id AS question_id,
+  t.id AS tag_id,
+  t.tag_name
+FROM `rittman-analytics-ed-pasfield`.`dev`.`stg_questions` q,
+UNNEST(tag_list) AS tag
+LEFT JOIN `rittman-analytics-ed-pasfield`.`dev`.`stg_tags` t
+  ON LOWER(t.tag_name) = LOWER(tag)
+WHERE tag IS NOT NULL
+  AND t.tag_name IS NOT NULL;
+
+
+[0m03:02:44.916907 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:02:45.364220 [debug] [Thread-2 (]: Writing runtime sql for node "model.stack_overflow.dim_questions"
+[0m03:02:45.365590 [debug] [Thread-2 (]: On model.stack_overflow.dim_questions: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.dim_questions"} */
+
+  
+    
+
+    create or replace table `rittman-analytics-ed-pasfield`.`dev`.`dim_questions`
+      
+    partition by date_trunc(creation_date, month)
+    cluster by question_key
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  FARM_FINGERPRINT(CONCAT('question_', CAST(id AS STRING))) AS question_key,
+  id AS question_id,
+  creation_date,
+  DATE(creation_date) AS question_date,
+  view_count,
+  score,
+  answer_count,
+  comment_count,
+  owner_user_id,
+  tags,
+  unanswered_flag
+FROM `rittman-analytics-ed-pasfield`.`dev`.`stg_questions`
+    );
+  
+[0m03:02:45.535571 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:e9dd63c7-c797-4707-9b0f-e2921b1e2b0a&page=queryresults
+[0m03:02:45.932272 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1212bad50>]}
+[0m03:02:45.933402 [info ] [Thread-1 (]: 7 of 9 OK created sql view model dev.stg_question_tag_bridge ................... [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m03:02:45.934190 [debug] [Thread-1 (]: Finished running node model.stack_overflow.stg_question_tag_bridge
+[0m03:02:46.103801 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:d42462d1-0e71-4fb1-a447-596fd6e3d2db&page=queryresults
+[0m03:02:52.465875 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1211a6f50>]}
+[0m03:02:52.466502 [info ] [Thread-2 (]: 6 of 9 OK created sql table model dev.dim_questions ............................ [[32mCREATE TABLE (23.0m rows, 1.9 GiB processed)[0m in 7.59s]
+[0m03:02:52.467176 [debug] [Thread-2 (]: Finished running node model.stack_overflow.dim_questions
+[0m03:02:52.467796 [debug] [Thread-4 (]: Began running node model.stack_overflow.dim_question_tag_bridge
+[0m03:02:52.468248 [info ] [Thread-4 (]: 8 of 9 START sql table model dev.dim_question_tag_bridge ....................... [RUN]
+[0m03:02:52.468632 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.stack_overflow.stg_questions, now model.stack_overflow.dim_question_tag_bridge)
+[0m03:02:52.468882 [debug] [Thread-4 (]: Began compiling node model.stack_overflow.dim_question_tag_bridge
+[0m03:02:52.471614 [debug] [Thread-4 (]: Writing injected SQL for node "model.stack_overflow.dim_question_tag_bridge"
+[0m03:02:52.472370 [debug] [Thread-4 (]: Began executing node model.stack_overflow.dim_question_tag_bridge
+[0m03:02:52.474270 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m03:02:52.919115 [debug] [Thread-4 (]: Writing runtime sql for node "model.stack_overflow.dim_question_tag_bridge"
+[0m03:02:52.922138 [debug] [Thread-4 (]: On model.stack_overflow.dim_question_tag_bridge: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.dim_question_tag_bridge"} */
+
+  
+    
+
+    create or replace table `rittman-analytics-ed-pasfield`.`dev`.`dim_question_tag_bridge`
+      
+    
+    cluster by question_key, tag_key
+
+    OPTIONS()
+    as (
+      
+
+SELECT
+  dq.question_key,
+  dt.tag_key,
+  qtb.question_id,
+  qtb.tag_id
+FROM `rittman-analytics-ed-pasfield`.`dev`.`stg_question_tag_bridge` qtb
+JOIN `rittman-analytics-ed-pasfield`.`dev`.`dim_questions` dq
+  ON dq.question_id = qtb.question_id
+JOIN `rittman-analytics-ed-pasfield`.`dev`.`dim_tags` dt
+  ON dt.tag_id = qtb.tag_id
+    );
+  
+[0m03:02:53.404685 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:53883b4e-52e6-4a2e-89a9-155ca04708e6&page=queryresults
+[0m03:03:01.806714 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120cff810>]}
+[0m03:03:01.808961 [info ] [Thread-4 (]: 8 of 9 OK created sql table model dev.dim_question_tag_bridge .................. [[32mCREATE TABLE (2.7m rows, 1.1 GiB processed)[0m in 9.34s]
+[0m03:03:01.809812 [debug] [Thread-4 (]: Finished running node model.stack_overflow.dim_question_tag_bridge
+[0m03:03:01.811021 [debug] [Thread-1 (]: Began running node model.stack_overflow.fct_tags_stats_monthly
+[0m03:03:01.811810 [info ] [Thread-1 (]: 9 of 9 START sql table model dev.fct_tags_stats_monthly ........................ [RUN]
+[0m03:03:01.812345 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.stack_overflow.stg_question_tag_bridge, now model.stack_overflow.fct_tags_stats_monthly)
+[0m03:03:01.812685 [debug] [Thread-1 (]: Began compiling node model.stack_overflow.fct_tags_stats_monthly
+[0m03:03:01.817023 [debug] [Thread-1 (]: Writing injected SQL for node "model.stack_overflow.fct_tags_stats_monthly"
+[0m03:03:01.818230 [debug] [Thread-1 (]: Began executing node model.stack_overflow.fct_tags_stats_monthly
+[0m03:03:01.820512 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:03:02.537449 [debug] [Thread-1 (]: Writing runtime sql for node "model.stack_overflow.fct_tags_stats_monthly"
+[0m03:03:02.540484 [debug] [Thread-1 (]: On model.stack_overflow.fct_tags_stats_monthly: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rittman_analytics", "target_name": "dev", "node_id": "model.stack_overflow.fct_tags_stats_monthly"} */
+
+  
+    
+
+    create or replace table `rittman-analytics-ed-pasfield`.`dev`.`fct_tags_stats_monthly`
+      
+    partition by date_trunc(creation_month, month)
+    cluster by tag_key
+
+    OPTIONS()
+    as (
+      
+
+WITH base AS (
+  SELECT
+    dq.question_key,
+    qtb.tag_key,
+    COALESCE(dt.tag_name, 'untagged') AS tag_name,
+    DATE_TRUNC(dq.creation_date, MONTH) AS creation_month,
+    dq.view_count,
+    dq.score
+  FROM `rittman-analytics-ed-pasfield`.`dev`.`dim_questions` dq
+  LEFT JOIN `rittman-analytics-ed-pasfield`.`dev`.`dim_question_tag_bridge` qtb
+    ON dq.question_key = qtb.question_key
+  LEFT JOIN `rittman-analytics-ed-pasfield`.`dev`.`dim_tags` dt
+    ON qtb.tag_key = dt.tag_key
+  WHERE dq.unanswered_flag
+),
+
+monthly AS (
+  SELECT
+    creation_month,
+    tag_key,
+    tag_name,
+    COUNT(*) AS unanswered_questions,
+    COUNT(DISTINCT question_key) AS number_of_questions_mentioned_on,
+    SUM(view_count) AS monthly_view_count,
+    SUM(score) AS monthly_score,
+    AVG(view_count) AS avg_view_count,
+    AVG(score) AS avg_score
+  FROM base
+  GROUP BY creation_month, tag_key, tag_name
+)
+
+  SELECT
+    creation_month,
+    tag_key,
+    tag_name,
+    unanswered_questions,
+    number_of_questions_mentioned_on,
+    monthly_view_count,
+    monthly_score,
+    avg_view_count,
+    avg_score,
+    ROUND(avg_score - LAG(avg_score) OVER (
+      PARTITION BY tag_key
+      ORDER BY creation_month
+    ), 2) AS delta_1m_score,
+    ROUND(avg_score - LAG(avg_score, 3) OVER (
+      PARTITION BY tag_key
+      ORDER BY creation_month
+    ), 2) AS delta_3m_score,
+    ROUND(avg_score - LAG(avg_score, 6) OVER (
+      PARTITION BY tag_key
+      ORDER BY creation_month
+    ), 2) AS delta_6m_score,
+    ROUND(avg_view_count - LAG(avg_view_count) OVER (
+      PARTITION BY tag_key
+      ORDER BY creation_month
+    ), 2) AS delta_1m_view,
+    ROUND(avg_view_count - LAG(avg_view_count, 3) OVER (
+      PARTITION BY tag_key
+      ORDER BY creation_month
+    ), 2) AS delta_3m_view,
+    ROUND(avg_view_count - LAG(avg_view_count, 6) OVER (
+      PARTITION BY tag_key
+      ORDER BY creation_month
+    ), 2) AS delta_6m_view,
+FROM monthly
+    );
+  
+[0m03:03:03.014817 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rittman-analytics-ed-pasfield&j=bq:US:36b38a6e-4199-48a2-b535-84ec81201d4d&page=queryresults
+[0m03:03:13.450540 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8eb38c06-30b6-45fe-9cba-d963861cd157', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1212f7c90>]}
+[0m03:03:13.453082 [info ] [Thread-1 (]: 9 of 9 OK created sql table model dev.fct_tags_stats_monthly ................... [[32mCREATE TABLE (247.4k rows, 767.4 MiB processed)[0m in 11.64s]
+[0m03:03:13.453808 [debug] [Thread-1 (]: Finished running node model.stack_overflow.fct_tags_stats_monthly
+[0m03:03:13.456048 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:03:13.458477 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:03:13.458840 [debug] [MainThread]: Connection 'model.stack_overflow.fct_tags_stats_monthly' was properly closed.
+[0m03:03:13.459100 [debug] [MainThread]: Connection 'model.stack_overflow.dim_questions' was properly closed.
+[0m03:03:13.459328 [debug] [MainThread]: Connection 'model.stack_overflow.dim_question_tag_bridge' was properly closed.
+[0m03:03:13.459743 [info ] [MainThread]: 
+[0m03:03:13.460051 [info ] [MainThread]: Finished running 6 table models, 3 view models in 0 hours 0 minutes and 47.58 seconds (47.58s).
+[0m03:03:13.462014 [debug] [MainThread]: Command end result
+[0m03:03:13.483806 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse/target/manifest.json
+[0m03:03:13.485739 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse/target/semantic_manifest.json
+[0m03:03:13.490067 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/edwardpasfield/Documents/Projects/rittman_analytics_stack_overflow/data-warehouse/target/run_results.json
+[0m03:03:13.490274 [info ] [MainThread]: 
+[0m03:03:13.490502 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:03:13.490668 [info ] [MainThread]: 
+[0m03:03:13.490842 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[0m03:03:13.492930 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 48.541786, "process_in_blocks": "0", "process_kernel_time": 0.340107, "process_mem_max_rss": "212713472", "process_out_blocks": "0", "process_user_time": 1.636389}
+[0m03:03:13.493179 [debug] [MainThread]: Command `dbt run` succeeded at 03:03:13.493131 after 48.54 seconds
+[0m03:03:13.493398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100a13090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109007d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110900290>]}
+[0m03:03:13.493600 [debug] [MainThread]: Flushing usage events
+[0m03:03:14.150211 [debug] [MainThread]: An error was encountered while trying to flush usage events
