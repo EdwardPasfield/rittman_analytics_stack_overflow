@@ -14,6 +14,8 @@ In this exercise we're focused on identifying the topics that are popular and tr
 
 📍 **BigQuery Dataset**: https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1srittman-analytics-ed-pasfield!2sdev
 
+**Note**: Dataset is configured with public read access. Anyone can query the tables without authentication. `rittman-analytics-ed-pasfield.dev`
+
 ### 3. Data Model Documentation
 
 📍 **Methodology Document**: `data-warehouse/methodology.md`
