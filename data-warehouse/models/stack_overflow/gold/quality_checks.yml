@@ -12,6 +12,7 @@ models:
         tests:
           - unique
           - not_null
+
   - name: dim_tags
     description: Normalized tag dimension.
     columns:
@@ -23,6 +24,7 @@ models:
         tests:
           - unique
           - not_null
+
   - name: dim_question_tag_bridge
     description: Bridge between dim_questions and dim_tags.
     columns:
@@ -38,4 +40,42 @@ models:
           - relationships:
               to: ref('dim_tags')
               field: tag_key
+
+  - name: fct_tags_stats_monthly
+    description: Monthly fact table with tag statistics and deltas for unanswered questions.
+    tests:
+      - fct_tags_stats_monthly_consistency
+    columns:
+      - name: creation_month
+        tests:
+          - not_null
+
+      - name: tag_key
+        tests:
+          - relationships:
+              to: ref('dim_tags')
+              field: tag_key
+
+      - name: unanswered_questions
+        tests:
+          - not_null
+
+      - name: number_of_questions_mentioned_on
+        tests:
+          - not_null
+      - name: monthly_view_count
+        tests:
+          - not_null
+
+      - name: monthly_score
+        tests:
+          - not_null
+
+      - name: avg_view_count
+        tests:
+          - not_null
+
+      - name: avg_score
+        tests:
+          - not_null
 
