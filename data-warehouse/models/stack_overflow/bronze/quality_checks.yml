@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: posts_questions
+    description: |
+      The raw Stack Overflow question feed used for bronze ingestion.
+      Other fields include title, body, creation_date, last_activity_date, view_count, score, tags, accepted_answer_id, owner_user_id, answer_count, comment_count.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: creation_date
+        tests:
+          - not_null
+      - name: tags
+        tests:
+          - not_null
+
+  - name: tags
+    description: |
+      Stack Overflow tag metadata used to classify topics.
+      Other fields include tag_name and count.
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: tag_name
+        tests:
+          - not_null
+

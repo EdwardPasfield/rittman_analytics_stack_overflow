@@ -1,0 +1,13 @@
+rittman_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('BQ_PROJECT', 'rittman-analytics-ed-pasfield') }}"
+      dataset: "{{ env_var('DBT_PREFIX', 'dev') }}"
+      threads: 4
+      keyfile: "{{ env_var('BQ_KEY_PATH') }}"
+      timeout_seconds: 300
+      location: US
+

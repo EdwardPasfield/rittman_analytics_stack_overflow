@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_questions
+    description: Dimensional table with surrogate question_key.
+    columns:
+      - name: question_key
+        tests:
+          - unique
+          - not_null
+      - name: question_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_tags
+    description: Normalized tag dimension.
+    columns:
+      - name: tag_key
+        tests:
+          - unique
+          - not_null
+      - name: tag_id
+        tests:
+          - unique
+          - not_null
+  - name: dim_question_tag_bridge
+    description: Bridge between dim_questions and dim_tags.
+    columns:
+      - name: question_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_questions')
+              field: question_key
+      - name: tag_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_tags')
+              field: tag_key
+
